@@ -22,16 +22,16 @@
                 <a href="<?= base_url(); ?>dashboard" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fas fa-bars me-2"></i> Dashboard
                 </a>
-                <a href="paket.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="<?= base_url(); ?>paket" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-archive me-2"></i> Daftar Paket
                 </a>
                 <a href="<?= base_url(); ?>konsumen" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-server me-2"></i> Data Konsumen
                 </a>
-                <a href="karyawan.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="<?= base_url(); ?>transaksi" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-server me-2"></i> Data Transaksi
                 </a>
-                <a href="report.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="<?= base_url(); ?>report" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-info-circle me-2"></i> Report
                 </a>
                 <a href="profile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">

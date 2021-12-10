@@ -8,8 +8,8 @@
     <div class="table-head row my-5 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="left">Data Konsumen</h3>
-                <a href="<?= base_url() ?>konsumen/tambah" class="right btn btn-outline-primary"><i class="fas fa-plus"></i> Tambah</a>
+                <h3 class="left">Daftar Paket</h3>
+                <a href="<?= base_url() ?>paket/tambah" class="right btn btn-outline-primary"><i class="fas fa-plus"></i> Tambah</a>
             </div>
         </div>
         <hr>
@@ -19,10 +19,9 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Kode</th>
-                            <th>Nama Konsumen</th>
-                            <th>Alamat</th>
-                            <th>Telpon(WA)</th>
+                            <th>Kode Paket</th>
+                            <th>Nama Paket</th>
+                            <th>Harga Paket</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -31,17 +30,15 @@
                         $no = 1;
                         foreach ($data as $row) { ?>
                             <tr>
-                                <th><?= $no++; ?></th>
-                                <td><?= $row->kode_konsumen; ?></td>
-                                <td><?= $row->nama_konsumen; ?></td>
-                                <td><?= $row->alamat_konsumen; ?></td>
-                                <td><?= $row->no_telp; ?></td>
+                                <td><?= $no++; ?></td>
+                                <td><?= $row->kode_paket ?></td>
+                                <td><?= $row->nama_paket; ?></td>
+                                <td><?= "Rp. " . number_format($row->harga_paket, 0, '.', '.'); ?></td>
                                 <td>
-                                    <a href="<?= base_url() ?>konsumen/edit/<?= $row->kode_konsumen; ?>" class="btn btn-outline-success"><i class="fas fa-edit"></i> Edit</a>
-                                    <a href="<?= base_url() ?>konsumen/delete/<?= $row->kode_konsumen; ?>" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin ???');"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    <a href="<?= base_url() ?>paket/edit/<?= $row->kode_paket; ?>" class="btn btn-outline-success"><i class="fas fa-edit"></i> Edit</a>
+                                    <a href="<?= base_url() ?>paket/delete/<?= $row->kode_paket; ?>" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin ???');"><i class="fas fa-trash-alt"></i> Delete</a>
                                 </td>
-                            </tr>
-                        <?php } ?>
+                            <?php } ?>
                     </tbody>
                 </table>
                 <nav aria-label="pagination" class="pagination">
