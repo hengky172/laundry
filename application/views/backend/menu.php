@@ -28,8 +28,11 @@
                 <a href="<?= base_url(); ?>konsumen" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-server me-2"></i> Data Konsumen
                 </a>
-                <a href="<?= base_url(); ?>transaksi" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-server me-2"></i> Data Transaksi
+                <a href="<?= base_url(); ?>transaksi/tambah" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-cart-plus"></i> Tambah Transaksi
+                </a>
+                <a href="<?= base_url(); ?>transaksi/riwayat" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-history"></i> Riwayat Transaksi
                 </a>
                 <a href="<?= base_url(); ?>report" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-info-circle me-2"></i> Report
