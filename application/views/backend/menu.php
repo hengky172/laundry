@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/style.css">
-    <title>My Laundry</title>
+    <title>MyLaundry</title>
 </head>
 
 <body>
@@ -26,19 +26,19 @@
                     <i class="fas fa-archive me-2"></i> Daftar Paket
                 </a>
                 <a href="<?= base_url(); ?>konsumen" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-server me-2"></i> Data Konsumen
+                    <i class="fas fa-users me-1"></i> Data Konsumen
                 </a>
                 <a href="<?= base_url(); ?>transaksi/tambah" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-cart-plus"></i> Tambah Transaksi
+                    <i class="fas fa-cart-plus me-1"></i> Tambah Transaksi
                 </a>
                 <a href="<?= base_url(); ?>transaksi/riwayat" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-history"></i> Riwayat Transaksi
+                    <i class="fas fa-history me-2"></i> Riwayat Transaksi
                 </a>
                 <a href="<?= base_url(); ?>report" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-info-circle me-2"></i> Report
+                    <i class="fas fa-file-alt me-2"></i> Report
                 </a>
                 <a href="profile.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-cogs"></i> Setting
+                    <i class="fas fa-cogs me-1"></i> Setting
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-sign-out-alt me-2"></i> Logout

@@ -6,6 +6,7 @@
 
     h3 {
         font-size: 16px;
+        color: #009d63;
     }
 
     hr {
@@ -32,7 +33,7 @@
     <table>
         <tr>
             <td width="400">
-                <h3>Laundry Clean</h3>
+                <h3>MyLaundry</h3>
             </td>
             <td>
                 <h3>Invoice</h3>
