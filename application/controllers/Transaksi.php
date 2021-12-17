@@ -51,6 +51,20 @@ class Transaksi extends CI_Controller
         $this->load->view('backend/dashboard', $isi);
     }
 
+    public function update_status()
+    {
+        $kode_transaksi = $this->input->post('kt');
+        $status = $this->input->post('stt');
+        date_default_timezone_set('Asia/Jakarta');
+        $tgl_ambil = date('Y-m-d h:i:s');
+        $status_bayar = 'Lunas';
+        if ($status == "Baru" or $status == "Proses") {
+            $this->m_transaksi->update_status($kode_transaksi, $status);
+        } else {
+            $this->m_transaksi->update_status1($kode_transaksi, $status, $tgl_ambil, $status_bayar);
+        }
+    }
+
     public function edit_transaksi($kode_transaksi)
     {
         $isi['content'] = 'backend/transaksi/edit_transaksi';
@@ -80,5 +94,21 @@ class Transaksi extends CI_Controller
             $this->session->set_flashdata('info', 'Data Transaksi Berhasil di Edit !!!');
             redirect('transaksi/riwayat', 'refresh');
         }
+    }
+
+    public function detail($kode_transaksi)
+    {
+        $this->load->library('dompdf_gen');
+        $isi['transaksi'] = $this->m_transaksi->detail($kode_transaksi);
+        $this->load->view('backend/transaksi/detail', $isi);
+
+        $paper_size = 'A5';
+        $orientation = 'landscape';
+        $html = $this->output->get_output();
+        $this->dompdf->set_paper($paper_size, $orientation);
+
+        $this->dompdf->load_html($html);
+        $this->dompdf->render();
+        $this->dompdf->stream("Detail Transaksi", array('Attachment' => 0));
     }
 }

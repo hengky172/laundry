@@ -18,7 +18,7 @@
 
 <body style="background-color: #c9f7e3;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">MyLaundry</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,6 +28,9 @@
                     <a class="nav-link active" aria-current="page" href="<?= base_url() ?>home">Home</a>
                     <a class="nav-link" href="<?= base_url() ?>cek_laundry">Cek Laundry</a>
                 </div>
+            </div>
+            <div class="nav justify-content-end">
+                <a href="<?= base_url() ?>panel" style="text-decoration: none; color:#fff;">Login</a>
             </div>
         </div>
     </nav>
