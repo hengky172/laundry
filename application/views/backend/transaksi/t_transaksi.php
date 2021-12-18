@@ -19,7 +19,7 @@ $tgl_masuk = date('Y-m-d h:i:s');
                 <form action="<?= base_url() ?>transaksi/simpan" method="post">
                     <div class="mb-3">
                         <label class="form-label">Kode Transaksi</label>
-                        <input type="text" name="kode_transaksi" value="<?= $kode_transaksi; ?>" class="form-control" readonly>
+                        <input type="text" name="kode_transaksi" value="<?= "TR" . date('ymd') . $kode_transaksi; ?>" class="form-control" readonly>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Konsumen</label>

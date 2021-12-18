@@ -6,11 +6,11 @@
             </div>
         </div>
         <hr>
-        <form action="">
+        <form method="post" action="<?= base_url() ?>cek_laundry">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-md-10">
-                        <input type="text" class="form-control" placeholder="Masukan Kode Transaksi Anda!">
+                        <input type="text" name="kode_transaksi" class="form-control" placeholder="Masukan Kode Transaksi Anda!">
                     </div>
                     <div class="col-md-2">
                         <button type="submit" class="btn btn-outline-info" style="margin-top: 0px;">Cek Laundry</button>
@@ -37,13 +37,28 @@
                             <th>Tanggal Masuk</th>
                             <th>Paket</th>
                             <th>Total</th>
+                            <th>Status Pembayaran</th>
                             <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="5" class="text-danger">Tidak ada data</td>
-                        </tr>
+                        <?php
+                        if (!empty($data)) {
+                            foreach ($data as $row) { ?>
+                                <tr>
+                                    <td><?= $row->nama_konsumen; ?></td>
+                                    <td><?= $row->tgl_masuk; ?></td>
+                                    <td><?= $row->nama_paket; ?></td>
+                                    <td><?= "Rp. " . number_format($row->grand_total, 0, '.', '.'); ?></td>
+                                    <td><?= $row->bayar; ?></td>
+                                    <td><?= $row->status; ?></td>
+                                </tr>
+                            <?php }
+                        } else { ?>
+                            <tr>
+                                <td colspan="6" class="bg-danger text-danger">Tidak Ada Data</td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>

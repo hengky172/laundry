@@ -17,21 +17,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Cuci Basah</td>
-                            <td>Rp.5.000</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>Cuci Kering</td>
-                            <td>Rp.6.000</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Cuci Setrika</td>
-                            <td>Rp.8.000</td>
-                        </tr>
+                        <?php
+                        $no = 1;
+                        foreach ($paket as $row) { ?>
+                            <tr>
+                                <td><?= $no++; ?></td>
+                                <td><?= $row->nama_paket; ?></td>
+                                <td><?= "Rp. " . number_format($row->harga_paket, 0, '.', '.'); ?></td>
+                            <?php } ?>
                     </tbody>
                 </table>
             </div>

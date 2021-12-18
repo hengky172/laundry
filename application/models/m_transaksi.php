@@ -21,7 +21,7 @@ class M_transaksi extends CI_Model
             $kode = 1;
         }
         $kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
-        $kodejadi = "TR" . date('Ymd') . $kodemax;
+        $kodejadi = "" . $kodemax;
         return $kodejadi;
     }
 
