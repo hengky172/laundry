@@ -103,7 +103,7 @@
         $('.status').change(function() {
             let status = $(this).val();
             let kt = status.substr(0, 13);
-            var stt = status.substr(13, 10);
+            let stt = status.substr(13, 10);
 
             $.ajax({
                 url: "<?= base_url() ?>transaksi/update_status",
